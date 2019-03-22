@@ -1,97 +1,95 @@
--- MySQL Workbench Forward Engineering
-
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+
+CREATE SCHEMA IF NOT EXISTS `quintaa_carsharing` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
+USE `quintaa_carsharing` ;
 
 -- -----------------------------------------------------
--- Schema CarSharing
+-- Table `quintaa_carsharing`.`Utente`
 -- -----------------------------------------------------
-
--- -----------------------------------------------------
--- Schema CarSharing
--- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `CarSharing` DEFAULT CHARACTER SET utf8 ;
-USE `CarSharing` ;
-
--- -----------------------------------------------------
--- Table `CarSharing`.`Utente`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `CarSharing`.`Utente` (
+CREATE TABLE IF NOT EXISTS `quintaa_carsharing`.`Utente` (
   `idUtente` INT NOT NULL AUTO_INCREMENT,
   `Nome` VARCHAR(45) NOT NULL,
   `Cognome` VARCHAR(45) NOT NULL,
   `Email` VARCHAR(45) NOT NULL,
   `NumeroCarta` VARCHAR(45) NOT NULL,
+  `Psw` VARCHAR(45) NOT NULL,
+  `CVV` INT NOT NULL,
   PRIMARY KEY (`idUtente`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `CarSharing`.`Auto`
+-- Table `quintaa_carsharing`.`Auto`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `CarSharing`.`Auto` (
+CREATE TABLE IF NOT EXISTS `quintaa_carsharing`.`Auto` (
   `Targa` VARCHAR(45) NOT NULL,
   `NumeroPosti` INT NOT NULL,
   `Marca` VARCHAR(45) NOT NULL,
   `Modello` VARCHAR(45) NOT NULL,
-  `Posizione` VARCHAR(45) NOT NULL,
+  `Latitudine` VARCHAR(45) NOT NULL,
+  `Longitudine` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`Targa`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `CarSharing`.`Utilizzi`
+-- Table `quintaa_carsharing`.`Utilizzi`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `CarSharing`.`Utilizzi` (
+CREATE TABLE IF NOT EXISTS `quintaa_carsharing`.`Utilizzi` (
   `idUtente` INT NOT NULL,
   `TargaAuto` VARCHAR(45) NOT NULL,
   `OraInizio` DATETIME NOT NULL,
   `OraFine` DATETIME NOT NULL,
-  PRIMARY KEY (`TargaAuto`, `idUtente`),
-  INDEX `fk_Utente_has_Auto_Auto1_idx` (`TargaAuto` ASC) VISIBLE,
-  INDEX `fk_Utente_has_Auto_Utente1_idx` (`idUtente` ASC) VISIBLE,
+  `Latitudine` VARCHAR(45) NOT NULL,
+  `Longitudine` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`TargaAuto`, `idUtente`, `OraInizio`, `OraFine`),
+  INDEX `fk_Utente_has_Auto_Auto1_idx` (`TargaAuto` ASC),
+  INDEX `fk_Utente_has_Auto_Utente1_idx` (`idUtente` ASC),
   CONSTRAINT `fk_Utente_has_Auto_Utente1`
     FOREIGN KEY (`idUtente`)
-    REFERENCES `CarSharing`.`Utente` (`idUtente`)
+    REFERENCES `quintaa_carsharing`.`Utente` (`idUtente`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Utente_has_Auto_Auto1`
     FOREIGN KEY (`TargaAuto`)
-    REFERENCES `CarSharing`.`Auto` (`Targa`)
+    REFERENCES `quintaa_carsharing`.`Auto` (`Targa`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `CarSharing`.`Utilizzi`
+-- Table `quintaa_carsharing`.`Utilizzi`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `CarSharing`.`Utilizzi` (
+CREATE TABLE IF NOT EXISTS `quintaa_carsharing`.`Utilizzi` (
   `idUtente` INT NOT NULL,
   `TargaAuto` VARCHAR(45) NOT NULL,
   `OraInizio` DATETIME NOT NULL,
   `OraFine` DATETIME NOT NULL,
-  PRIMARY KEY (`TargaAuto`, `idUtente`),
-  INDEX `fk_Utente_has_Auto_Auto1_idx` (`TargaAuto` ASC) VISIBLE,
-  INDEX `fk_Utente_has_Auto_Utente1_idx` (`idUtente` ASC) VISIBLE,
+  `Latitudine` VARCHAR(45) NOT NULL,
+  `Longitudine` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`TargaAuto`, `idUtente`, `OraInizio`, `OraFine`),
+  INDEX `fk_Utente_has_Auto_Auto1_idx` (`TargaAuto` ASC),
+  INDEX `fk_Utente_has_Auto_Utente1_idx` (`idUtente` ASC),
   CONSTRAINT `fk_Utente_has_Auto_Utente1`
     FOREIGN KEY (`idUtente`)
-    REFERENCES `CarSharing`.`Utente` (`idUtente`)
+    REFERENCES `quintaa_carsharing`.`Utente` (`idUtente`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Utente_has_Auto_Auto1`
     FOREIGN KEY (`TargaAuto`)
-    REFERENCES `CarSharing`.`Auto` (`Targa`)
+    REFERENCES `quintaa_carsharing`.`Auto` (`Targa`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `CarSharing`.`TeamService`
+-- Table `quintaa_carsharing`.`TeamService`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `CarSharing`.`TeamService` (
+CREATE TABLE IF NOT EXISTS `quintaa_carsharing`.`TeamService` (
   `idTeamService` INT NOT NULL AUTO_INCREMENT,
   `NumeroComponenti` INT NOT NULL,
   PRIMARY KEY (`idTeamService`))
@@ -99,68 +97,47 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `CarSharing`.`Riparazioni`
+-- Table `quintaa_carsharing`.`Riparazioni`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `CarSharing`.`Riparazioni` (
+CREATE TABLE IF NOT EXISTS `quintaa_carsharing`.`Riparazioni` (
   `TargaAuto` VARCHAR(45) NOT NULL,
   `idTeamService` INT NOT NULL,
-  `Data` DATE NOT NULL,
+  `DataRiparazione` DATE NOT NULL,
   `Importo` INT NOT NULL,
-  `Luogo` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`TargaAuto`, `idTeamService`),
-  INDEX `fk_Auto_has_TeamService_TeamService1_idx` (`idTeamService` ASC) VISIBLE,
-  INDEX `fk_Auto_has_TeamService_Auto1_idx` (`TargaAuto` ASC) VISIBLE,
+  `Descrzione` VARCHAR(45) NOT NULL,
+  `Kilometraggio` INT NOT NULL,
+  `Latitudine` VARCHAR(45) NOT NULL,
+  `Longitudine` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idTeamService`, `TargaAuto`),
+  INDEX `fk_Auto_has_TeamService_TeamService1_idx` (`idTeamService` ASC),
+  INDEX `fk_Auto_has_TeamService_Auto1_idx` (`TargaAuto` ASC),
   CONSTRAINT `fk_Auto_has_TeamService_Auto1`
     FOREIGN KEY (`TargaAuto`)
-    REFERENCES `CarSharing`.`Auto` (`Targa`)
+    REFERENCES `quintaa_carsharing`.`Auto` (`Targa`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Auto_has_TeamService_TeamService1`
     FOREIGN KEY (`idTeamService`)
-    REFERENCES `CarSharing`.`TeamService` (`idTeamService`)
+    REFERENCES `quintaa_carsharing`.`TeamService` (`idTeamService`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `CarSharing`.`Manutenzione`
+-- Table `quintaa_carsharing`.`MembroTeam`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `CarSharing`.`Manutenzione` (
-  `idManutenzione` INT NOT NULL AUTO_INCREMENT,
-  `Tipo` VARCHAR(45) NOT NULL,
-  `idTeamService` INT NOT NULL,
-  `TargaAuto` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`idManutenzione`),
-  INDEX `fk_Manutenzione_TeamService1_idx` (`idTeamService` ASC) VISIBLE,
-  INDEX `fk_Manutenzione_Auto1_idx` (`TargaAuto` ASC) VISIBLE,
-  CONSTRAINT `fk_Manutenzione_TeamService1`
-    FOREIGN KEY (`idTeamService`)
-    REFERENCES `CarSharing`.`TeamService` (`idTeamService`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Manutenzione_Auto1`
-    FOREIGN KEY (`TargaAuto`)
-    REFERENCES `CarSharing`.`Auto` (`Targa`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `CarSharing`.`MembroTeam`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `CarSharing`.`MembroTeam` (
+CREATE TABLE IF NOT EXISTS `quintaa_carsharing`.`MembroTeam` (
   `idMembroTeam` INT NOT NULL AUTO_INCREMENT,
   `Nome` VARCHAR(45) NOT NULL,
   `Cognome` VARCHAR(45) NOT NULL,
   `Eta` INT NOT NULL,
   `idTeamService` INT NOT NULL,
   PRIMARY KEY (`idMembroTeam`),
-  INDEX `fk_MembroTeam_TeamService1_idx` (`idTeamService` ASC) VISIBLE,
+  INDEX `fk_MembroTeam_TeamService1_idx` (`idTeamService` ASC),
   CONSTRAINT `fk_MembroTeam_TeamService1`
     FOREIGN KEY (`idTeamService`)
-    REFERENCES `CarSharing`.`TeamService` (`idTeamService`)
+    REFERENCES `quintaa_carsharing`.`TeamService` (`idTeamService`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
