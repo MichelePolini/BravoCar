@@ -4,6 +4,7 @@ footer{
     nav,
     .copyright{
       display: inline-block;
+      text-align: center;
     }
 
     ul{
@@ -37,7 +38,9 @@ footer{
     }
 
     .copyright{
+        text-align: center;
         padding: 15px 0;
+        padding-left: 200px; 
         margin: 0;
         .md-icon{
             font-size: 18px !important;

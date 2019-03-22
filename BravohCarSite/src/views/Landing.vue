@@ -6,20 +6,17 @@
           <div
             class="md-layout-item md-size-50 md-small-size-70 md-xsmall-size-100"
           >
-            <h1 class="title">Your Story Starts With Us.</h1>
+            <h1 class="title">Your Journey Starts With Us.</h1>
             <h4>
-              Every landing page needs a small description after the big bold
-              title, that's why we added this text here. Add here all the
-              information that can make you or your product create the first
-              impression.
+              Come and dicorver us !
             </h4>
             <br />
-            <md-button
+           <!-- <md-button
               href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
               class="md-success md-lg"
               target="_blank"
               ><i class="fas fa-play"></i> Watch video</md-button
-            >
+            > -->
           </div>
         </div>
       </div>
@@ -31,13 +28,10 @@
             <div
               class="md-layout-item md-size-66 md-xsmall-size-100 mx-auto text-center"
             >
-              <h2 class="title text-center">Let's talk product</h2>
+              <h2 class="title text-center">Learn More About Us</h2>
               <h5 class="description">
-                This is the paragraph where you can write more details about
-                your product. Keep you user engaged by providing meaningful
-                information. Remember that by this time, the user is curious,
-                otherwise he wouldn't scroll to get here. Add a button if you
-                want the user to see more.
+                We are the biggest Car Renting Agency that works all over the Methropolitan Area of Florence.
+                We offer several kinds of cars, one for every need. We offer personalized packages based on the user's request.   
               </h5>
             </div>
           </div>
