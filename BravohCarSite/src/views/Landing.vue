@@ -233,12 +233,10 @@
         <div class="container">
           <div class="md-layout">
             <div class="md-layout-item md-size-66 md-xsmall-size-100 mx-auto">
-              <h2 class="text-center title">Work with us</h2>
+              <h2 class="text-center title">Sign-Up</h2>
               <h4 class="text-center description">
-                Divide details about your product or agency work into parts.
-                Write a few lines about each one and contact us about any
-                further collaboration. We will responde get back to you in a
-                couple of hours.
+                  Become part of our community! <br>
+                  Fill in the fields below.
               </h4>
               <form class="contact-form">
                 <div class="md-layout">
@@ -254,14 +252,16 @@
                       <md-input v-model="email" type="email"></md-input>
                     </md-field>
                   </div>
-                </div>
-                <md-field maxlength="5">
-                  <label>Your Message</label>
-                  <md-textarea v-model="message"></md-textarea>
+                <div class="md-layout-item md-size-50">
+                <md-field>
+                  <label>Your Password</label>
+                  <md-input v-model="password" type="password"></md-input>
                 </md-field>
+                </div>
                 <div class="md-layout">
                   <div class="md-layout-item md-size-33 mx-auto text-center">
-                    <md-button class="md-success">Send Message</md-button>
+                    <md-button class="md-success">Sign-UP</md-button>
+                    </div>
                   </div>
                 </div>
               </form>

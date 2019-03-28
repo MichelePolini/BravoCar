@@ -8,7 +8,7 @@
   >
     <div class="md-toolbar-row md-collapse-lateral">
       <div class="md-toolbar-section-start">
-        <h3 class="md-title">Bravoh Car</h3>
+        <a href="#/"><h3 class="md-title">Bravoh Car</h3></a>
       </div>
       <div class="md-toolbar-section-end">
         <md-button
@@ -38,10 +38,7 @@
                 <md-tooltip md-direction="bottom">Bravoh Car on Instagram</md-tooltip>
               </md-list-item>
               <md-list-item>
-                <md-button class="md-sm md-white">Sign In</md-button>
-              </md-list-item>
-              <md-list-item>
-                <md-button class="md-sm md-white">Sign Up</md-button>
+                <md-button class="md-sm md-white" href="#/login">Sign-In</md-button>
               </md-list-item>
             </md-list>
           </div>
