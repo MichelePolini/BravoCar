@@ -3,20 +3,16 @@
     <parallax class="section page-header header-filter" :style="headerStyle">
       <div class="container">
         <div class="md-layout">
-          <div
-            class="md-layout-item md-size-50 md-small-size-70 md-xsmall-size-100"
-          >
+          <div class="md-layout-item md-size-50 md-small-size-70 md-xsmall-size-100">
             <h1 class="title">Your Journey Starts With Us.</h1>
-            <h4>
-              Come and dicorver us !
-            </h4>
-            <br />
-           <!-- <md-button
+            <h4>Come and dicorver us !</h4>
+            <br>
+            <!-- <md-button
               href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
               class="md-success md-lg"
               target="_blank"
               ><i class="fas fa-play"></i> Watch video</md-button
-            > -->
+            >-->
           </div>
         </div>
       </div>
@@ -25,13 +21,11 @@
       <div class="section">
         <div class="container">
           <div class="md-layout">
-            <div
-              class="md-layout-item md-size-66 md-xsmall-size-100 mx-auto text-center"
-            >
+            <div class="md-layout-item md-size-66 md-xsmall-size-100 mx-auto text-center">
               <h2 class="title text-center">Learn More About Us</h2>
               <h5 class="description">
                 We are the biggest Car Renting Agency that works all over the Methropolitan Area of Florence.
-                We offer several kinds of cars, one for every need. We offer personalized packages based on the user's request.   
+                We offer several kinds of cars, one for every need. We offer personalized packages based on the user's request.
               </h5>
             </div>
           </div>
@@ -93,40 +87,26 @@
                         :src="teamImg1"
                         alt="Thumbnail Image"
                         class="img-raised rounded-circle img-fluid"
-                      />
+                      >
                     </div>
                     <h4 class="card-title">
-                      Gigi Hadid
-                      <br />
-                      <small class="card-description text-muted">Model</small>
+                      Niccolò Sarti
+                      <br>
+                      <small class="card-description text-muted">Database engineer</small>
                     </h4>
 
                     <md-card-content>
-                      <p class="card-description">
-                        You can write here details about one of your team
-                        members. You can give more details about what they do.
-                        Feel free to add some <a href="#">links</a> for people
-                        to be able to follow them outside the site.
-                      </p>
+                      <p class="card-description">The querys are my blood and the db is my heart</p>
                     </md-card-content>
 
                     <md-card-actions class="text-center">
-                      <md-button
-                        href="javascript:void(0)"
-                        class="md-just-icon md-simple"
-                      >
+                      <md-button href="javascript:void(0)" class="md-just-icon md-simple">
                         <i class="fab fa-twitter"></i>
                       </md-button>
-                      <md-button
-                        href="javascript:void(0)"
-                        class="md-just-icon md-simple"
-                      >
+                      <md-button href="javascript:void(0)" class="md-just-icon md-simple">
                         <i class="fab fa-instagram"></i>
                       </md-button>
-                      <md-button
-                        href="javascript:void(0)"
-                        class="md-just-icon md-simple"
-                      >
+                      <md-button href="javascript:void(0)" class="md-just-icon md-simple">
                         <i class="fab fa-facebook-square"></i>
                       </md-button>
                     </md-card-actions>
@@ -141,36 +121,28 @@
                         :src="teamImg2"
                         alt="Thumbnail Image"
                         class="img-raised rounded-circle img-fluid"
-                      />
+                      >
                     </div>
                     <h4 class="card-title">
-                      Carla Hortensia
-                      <br />
-                      <small class="card-description text-muted"
-                        >Designer</small
-                      >
+                      Leonardo Fralini
+                      <br>
+                      <small class="card-description text-muted">CEO</small>
                     </h4>
 
                     <md-card-content>
                       <p class="card-description">
-                        You can write here details about one of your team
-                        members. You can give more details about what they do.
-                        Feel free to add some <a href="#">links</a> for people
-                        to be able to follow them outside the site.
+                        I always wished to possess a renting car company...since i've failed my other businesses
                       </p>
                     </md-card-content>
 
                     <md-card-actions class="text-center">
-                      <md-button
-                        href="javascript:void(0)"
-                        class="md-just-icon md-simple"
-                      >
+                      <md-button href="javascript:void(0)" class="md-just-icon md-simple">
                         <i class="fab fa-twitter"></i>
                       </md-button>
-                      <md-button
-                        href="javascript:void(0)"
-                        class="md-just-icon md-simple"
-                      >
+                      <md-button href="javascript:void(0)" class="md-just-icon md-simple">
+                        <i class="fab fa-instagram"></i>
+                      </md-button>
+                      <md-button href="javascript:void(0)" class="md-just-icon md-simple">
                         <i class="fab fa-linkedin"></i>
                       </md-button>
                     </md-card-actions>
@@ -185,41 +157,99 @@
                         :src="teamImg3"
                         alt="Thumbnail Image"
                         class="img-raised rounded-circle img-fluid"
-                      />
+                      >
                     </div>
                     <h4 class="card-title">
-                      Kendall Jenner
-                      <br />
-                      <small class="card-description text-muted">Model</small>
+                      Lorenzo Filipelli
+                      <br>
+                      <small class="card-description text-muted">System Engineer</small>
+                    </h4>
+
+                    <md-card-content>
+                      <p class="card-description">
+                        It has been 4 day since i slept well...i'm currently trying to install Arch... 
+                      </p>
+                    </md-card-content>
+
+                    <md-card-actions class="text-center">
+                      <md-button href="javascript:void(0)" class="md-just-icon md-simple">
+                        <i class="fab fa-twitter"></i>
+                      </md-button>
+                      <md-button href="javascript:void(0)" class="md-just-icon md-simple">
+                        <i class="fab fa-instagram"></i>
+                      </md-button>
+                      <md-button href="javascript:void(0)" class="md-just-icon md-simple">
+                        <i class="fab fa-facebook-square"></i>
+                      </md-button>
+                    </md-card-actions>
+                  </md-card>
+                </div>
+              </div>
+              <div class="md-layout-item md-medium-size-33 md-small-size-100">
+                <div class="team-player">
+                  <md-card class="md-card-plain">
+                    <div class="md-layout-item md-size-50 mx-auto">
+                      <img
+                        :src="teamImg2"
+                        alt="Thumbnail Image"
+                        class="img-raised rounded-circle img-fluid"
+                      >
+                    </div>
+                    <h4 class="card-title">
+                      Michele Polini
+                          <br>
+                      <small class="card-description text-muted">Finance Strategist</small>
+                    </h4>
+
+                    <md-card-content>
+                      <p class="card-description">
+                        The compound intrest is my life !
+                      </p>
+                    </md-card-content>
+
+                    <md-card-actions class="text-center">
+                      <md-button href="javascript:void(0)" class="md-just-icon md-simple">
+                        <i class="fab fa-twitter"></i>
+                      </md-button>
+                      <md-button href="javascript:void(0)" class="md-just-icon md-simple">
+                        <i class="fab fa-linkedin"></i>
+                      </md-button>
+                    </md-card-actions>
+                  </md-card>
+                </div>
+              </div>
+              <div class="md-layout-item md-medium-size-33 md-small-size-100">
+                <div class="team-player">
+                  <md-card class="md-card-plain">
+                    <div class="md-layout-item md-size-50 mx-auto">
+                      <img
+                        :src="teamImg2"
+                        alt="Thumbnail Image"
+                        class="img-raised rounded-circle img-fluid"
+                      >
+                    </div>
+                    <h4 class="card-title">
+                      Carla Hortensia
+                      <br>
+                      <small class="card-description text-muted">Designer</small>
                     </h4>
 
                     <md-card-content>
                       <p class="card-description">
                         You can write here details about one of your team
                         members. You can give more details about what they do.
-                        Feel free to add some <a href="#">links</a> for people
+                        Feel free to add some
+                        <a href="#">links</a> for people
                         to be able to follow them outside the site.
                       </p>
                     </md-card-content>
 
                     <md-card-actions class="text-center">
-                      <md-button
-                        href="javascript:void(0)"
-                        class="md-just-icon md-simple"
-                      >
+                      <md-button href="javascript:void(0)" class="md-just-icon md-simple">
                         <i class="fab fa-twitter"></i>
                       </md-button>
-                      <md-button
-                        href="javascript:void(0)"
-                        class="md-just-icon md-simple"
-                      >
-                        <i class="fab fa-instagram"></i>
-                      </md-button>
-                      <md-button
-                        href="javascript:void(0)"
-                        class="md-just-icon md-simple"
-                      >
-                        <i class="fab fa-facebook-square"></i>
+                      <md-button href="javascript:void(0)" class="md-just-icon md-simple">
+                        <i class="fab fa-linkedin"></i>
                       </md-button>
                     </md-card-actions>
                   </md-card>
@@ -235,8 +265,8 @@
             <div class="md-layout-item md-size-66 md-xsmall-size-100 mx-auto">
               <h2 class="text-center title">Sign-Up</h2>
               <h4 class="text-center description">
-                  Become part of our community! <br>
-                  Fill in the fields below.
+                Become part of our community!
+                <br>Fill in the fields below.
               </h4>
               <form class="contact-form">
                 <div class="md-layout">
@@ -252,15 +282,15 @@
                       <md-input v-model="email" type="email"></md-input>
                     </md-field>
                   </div>
-                <div class="md-layout-item md-size-50">
-                <md-field>
-                  <label>Your Password</label>
-                  <md-input v-model="password" type="password"></md-input>
-                </md-field>
-                </div>
-                <div class="md-layout">
-                  <div class="md-layout-item md-size-33 mx-auto text-center">
-                    <md-button class="md-success">Sign-UP</md-button>
+                  <div class="md-layout-item md-size-50">
+                    <md-field>
+                      <label>Your Password</label>
+                      <md-input v-model="password" type="password"></md-input>
+                    </md-field>
+                  </div>
+                  <div class="md-layout">
+                    <div class="md-layout-item md-size-33 mx-auto text-center">
+                      <md-button class="md-success">Sign-UP</md-button>
                     </div>
                   </div>
                 </div>
