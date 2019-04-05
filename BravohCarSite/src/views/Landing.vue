@@ -37,29 +37,15 @@
           </div>
           <div class="features text-center">
             <div class="md-layout">
-              <div class="md-layout-item md-medium-size-33 md-small-size-100">
-                <div class="info">
-                  <div class="icon icon-info">
-                    <md-icon>chat</md-icon>
-                  </div>
-                  <h4 class="info-title">Free Chat</h4>
-                  <p>
-                    Divide details about your product or agency work into parts.
-                    Write a few lines about each one. A paragraph describing a
-                    feature will be enough.
-                  </p>
-                </div>
-              </div>
+              
               <div class="md-layout-item md-medium-size-33 md-small-size-100">
                 <div class="info">
                   <div class="icon icon-success">
                     <md-icon>verified_user</md-icon>
                   </div>
-                  <h4 class="info-title">Verified Users</h4>
+                  <h4 class="info-title">We met about our costumers</h4>
                   <p>
-                    Divide details about your product or agency work into parts.
-                    Write a few lines about each one. A paragraph describing a
-                    feature will be enough.
+                    Thanks to BravohCar, carsharing has never been easier. Register, validate and drive – with BravohCar you always have a car in Florence when you need one
                   </p>
                 </div>
               </div>
@@ -68,11 +54,9 @@
                   <div class="icon icon-danger">
                     <md-icon>fingerprint</md-icon>
                   </div>
-                  <h4 class="info-title">Fingerprint</h4>
+                  <h4 class="info-title">Reliable like a Fingerprint</h4>
                   <p>
-                    Divide details about your product or agency work into parts.
-                    Write a few lines about each one. A paragraph describing a
-                    feature will be enough.
+                    Our service is grant to be the best in term of quality and cost. Our deal with car companies made possible to provide the best service at the best cost.
                   </p>
                 </div>
               </div>
@@ -90,24 +74,58 @@
                   <md-card class="md-card-plain">
                     <div class="md-layout-item md-size-50 mx-auto">
                       <img
+                        :src="teamImg2"
+                        alt="Thumbnail Image"
+                        class="img-raised rounded-circle img-fluid"
+                      />
+                    </div>
+                    <h4 class="card-title">
+                      Leonardo Fralini
+                      <br>
+                      <small class="card-description text-muted">CEO</small>
+                    </h4>
+
+                    <md-card-content>
+                      <p class="card-description">
+                        I always wished to possess a renting car company...since i've failed my other businesses
+                      </p>
+                    </md-card-content>
+
+                    <md-card-actions class="text-center">
+                      <md-button
+                        href="javascript:void(0)"
+                        class="md-just-icon md-simple"
+                      >
+                        <i class="fab fa-twitter"></i>
+                      </md-button>
+                      <md-button
+                        href="javascript:void(0)"
+                        class="md-just-icon md-simple"
+                      >
+                        <i class="fab fa-linkedin"></i>
+                      </md-button>
+                    </md-card-actions>
+                  </md-card>
+                </div>
+              </div>
+              <div class="md-layout-item md-medium-size-33 md-small-size-100">
+                <div class="team-player">
+                  <md-card class="md-card-plain">
+                    <div class="md-layout-item md-size-50 mx-auto">
+                      <img
                         :src="teamImg1"
                         alt="Thumbnail Image"
                         class="img-raised rounded-circle img-fluid"
                       />
                     </div>
                     <h4 class="card-title">
-                      Gigi Hadid
-                      <br />
-                      <small class="card-description text-muted">Model</small>
+                      Niccolò Sarti
+                      <br>
+                      <small class="card-description text-muted">Database engineer</small>
                     </h4>
 
                     <md-card-content>
-                      <p class="card-description">
-                        You can write here details about one of your team
-                        members. You can give more details about what they do.
-                        Feel free to add some <a href="#">links</a> for people
-                        to be able to follow them outside the site.
-                      </p>
+                      <p class="card-description">The querys are my blood and the db is my heart</p>
                     </md-card-content>
 
                     <md-card-actions class="text-center">
@@ -138,40 +156,71 @@
                   <md-card class="md-card-plain">
                     <div class="md-layout-item md-size-50 mx-auto">
                       <img
-                        :src="teamImg2"
+                        :src="polo"
                         alt="Thumbnail Image"
                         class="img-raised rounded-circle img-fluid"
-                      />
+                      >
                     </div>
                     <h4 class="card-title">
-                      Carla Hortensia
-                      <br />
-                      <small class="card-description text-muted"
-                        >Designer</small
-                      >
+                      Michele Polini
+                      <br>
+                      <small class="card-description text-muted">Finance Strategist</small>
                     </h4>
 
                     <md-card-content>
                       <p class="card-description">
-                        You can write here details about one of your team
-                        members. You can give more details about what they do.
-                        Feel free to add some <a href="#">links</a> for people
-                        to be able to follow them outside the site.
+                        The compound interest is my life !
                       </p>
                     </md-card-content>
 
                     <md-card-actions class="text-center">
-                      <md-button
-                        href="javascript:void(0)"
-                        class="md-just-icon md-simple"
-                      >
+                      <md-button href="javascript:void(0)" class="md-just-icon md-simple">
                         <i class="fab fa-twitter"></i>
                       </md-button>
-                      <md-button
-                        href="javascript:void(0)"
-                        class="md-just-icon md-simple"
+                      <md-button href="javascript:void(0)" class="md-just-icon md-simple">
+                        <i class="fab fa-instagram"></i>
+                      </md-button>
+                      <md-button href="javascript:void(0)" class="md-just-icon md-simple">
+                        <i class="fab fa-facebook-square"></i>
+                      </md-button>
+                    </md-card-actions>
+                  </md-card>
+                </div>
+              </div>
+              <div class="md-layout-item md-medium-size-33 md-small-size-100">
+                <div class="team-player">
+                  <md-card class="md-card-plain">
+                    <div class="md-layout-item md-size-50 mx-auto">
+                      <img
+                        :src="bibolaz"
+                        alt="Thumbnail Image"
+                        class="img-raised rounded-circle img-fluid"
                       >
-                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <h4 class="card-title">
+                      Albi Biba
+                      <br>
+                      <small class="card-description text-muted">Fullstack Developer</small>
+                    </h4>
+
+
+
+
+                    <md-card-content>
+                      <p class="card-description">
+                        I use API key to unlock my house door.
+                      </p>
+                    </md-card-content>
+
+                    <md-card-actions class="text-center">
+                      <md-button href="javascript:void(0)" class="md-just-icon md-simple">
+                        <i class="fab fa-twitter"></i>
+                      </md-button>
+                      <md-button href="javascript:void(0)" class="md-just-icon md-simple">
+                        <i class="fab fa-instagram"></i>
+                      </md-button>
+                      <md-button href="javascript:void(0)" class="md-just-icon md-simple">
+                        <i class="fab fa-facebook-square"></i>
                       </md-button>
                     </md-card-actions>
                   </md-card>
@@ -188,17 +237,14 @@
                       />
                     </div>
                     <h4 class="card-title">
-                      Kendall Jenner
-                      <br />
-                      <small class="card-description text-muted">Model</small>
+                      Lorenzo Filipelli
+                      <br>
+                      <small class="card-description text-muted">System Engineer</small>
                     </h4>
 
                     <md-card-content>
                       <p class="card-description">
-                        You can write here details about one of your team
-                        members. You can give more details about what they do.
-                        Feel free to add some <a href="#">links</a> for people
-                        to be able to follow them outside the site.
+                        It has been 4 day since i slept well...i'm currently trying to install Arch... 
                       </p>
                     </md-card-content>
 
@@ -321,6 +367,14 @@ export default {
     teamImg3: {
       type: String,
       default: require("@/assets/img/faces/kendall.jpg")
+    },
+    polo: {
+      type: String,
+      default: require("@/assets/img/faces/polo.jpg")
+    },
+    bibolaz: {
+      type: String,
+      default: require("@/assets/img/faces/biba.jpg")
     }
   },
   data() {
