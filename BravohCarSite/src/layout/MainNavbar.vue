@@ -40,6 +40,9 @@
               <md-list-item>
                 <md-button class="md-sm md-white" href="#/login">Sign-In</md-button>
               </md-list-item>
+              <md-list-item>
+                <md-button class="md-sm md-white" href="#/landing">See cars</md-button>
+              </md-list-item>
             </md-list>
           </div>
         </div>

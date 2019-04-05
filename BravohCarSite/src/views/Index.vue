@@ -1,17 +1,22 @@
 <template>
   <div class="wrapper">
     <parallax class="page-header header-filter" :style="headerStyle">
-      <div class="md-layout">
-        <div class="md-layout-item">
-          <div class="image-wrapper">
-            <img :src="leaf4" alt="leaf4" class="leaf4" v-show="leafShow" />
-            <img :src="leaf3" alt="leaf3" class="leaf3" v-show="leafShow" />
-            <img :src="leaf2" alt="leaf2" class="leaf2" v-show="leafShow" />
-            <img :src="leaf1" alt="leaf1" class="leaf1" v-show="leafShow" />
-            <div class="brand">
-              <h1>Vue Material Kit</h1>
-              <h3>A Badass Vue.js UI Kit made with Material Design.</h3>
-            </div>
+      <div class="container">
+        <div class="md-layout">
+          <div
+            class="md-layout-item md-size-50 md-small-size-70 md-xsmall-size-100"
+          >
+            <h1 class="title">Find the nearest car to you !</h1>
+            <h4>
+              Ciuccia gay
+            </h4>
+            <br />
+           <!-- <md-button
+              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              class="md-success md-lg"
+              target="_blank"
+              ><i class="fas fa-play"></i> Watch video</md-button
+            > -->
           </div>
         </div>
       </div>
@@ -294,7 +299,7 @@ export default {
   props: {
     image: {
       type: String,
-      default: require("@/assets/img/vue-mk-header.jpg")
+      default: require("@/assets/img/city.jpg")
     },
     leaf4: {
       type: String,
@@ -323,6 +328,10 @@ export default {
     profile: {
       type: String,
       default: require("@/assets/img/profile.jpg")
+    },
+    firenze: {
+      type: String,
+      default: require("@/assets/img/firenze.jpg")
     }
   },
   data() {
