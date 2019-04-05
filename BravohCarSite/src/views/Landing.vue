@@ -238,33 +238,62 @@
                   Become part of our community! <br>
                   Fill in the fields below.
               </h4>
-              <form class="contact-form">
+
+
+              <!-- Filip e Polo, non modificare  -->
+              <form class="contact-form" method="POST" action="http://localhost:8000/Sign-Up.php">
                 <div class="md-layout">
+                  
                   <div class="md-layout-item md-size-50">
                     <md-field>
-                      <label>Your Name</label>
-                      <md-input v-model="name" type="text"></md-input>
+                      <label>Name</label>
+                      <md-input v-model="addaccount.name" type="text" name="Nome" required></md-input>
                     </md-field>
                   </div>
+                  
                   <div class="md-layout-item md-size-50">
                     <md-field>
-                      <label>Your Email</label>
-                      <md-input v-model="email" type="email"></md-input>
+                      <label>Surname</label>
+                      <md-input v-model="addaccount.surname" type="text" name="Cognome" required></md-input>
                     </md-field>
                   </div>
+
+                  <div class="md-layout-item md-size-50">
+                    <md-field>
+                      <label>Card's number</label>
+                      <md-input v-model="addaccount.number" type="text" name="NumeroCarta" required></md-input>
+                    </md-field>
+                  </div>
+
+                  <div class="md-layout-item md-size-50">
+                    <md-field>
+                      <label>CVV</label>
+                      <md-input v-model="addaccount.cvv" type="password" name="CVV" required></md-input>
+                    </md-field>
+                  </div>
+
+                  <div class="md-layout-item md-size-50">
+                    <md-field>
+                      <label>Email</label>
+                      <md-input v-model="addaccount.email" type="email" name="Email" required></md-input>
+                    </md-field>
+                  </div>
+                
                 <div class="md-layout-item md-size-50">
-                <md-field>
-                  <label>Your Password</label>
-                  <md-input v-model="password" type="password"></md-input>
-                </md-field>
+                  <md-field>
+                    <label>Password</label>
+                    <md-input v-model="addaccount.password" type="password" name="Psw" required></md-input>
+                  </md-field>
                 </div>
+                
                 <div class="md-layout">
                   <div class="md-layout-item md-size-33 mx-auto text-center">
-                    <md-button class="md-success">Sign-UP</md-button>
+                    <md-button type="submit" class="md-success">Sign-UP</md-button>
                     </div>
                   </div>
                 </div>
               </form>
+
             </div>
           </div>
         </div>
@@ -296,9 +325,14 @@ export default {
   },
   data() {
     return {
-      name: null,
-      email: null,
-      message: null
+      addaccount:{
+        name: null,
+        surname: null,
+        email: null,
+        password: null,
+        cvv: null,
+        number: null
+      },
     };
   },
   computed: {
