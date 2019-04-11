@@ -8,7 +8,7 @@
           >
             <h1 class="title">Find the nearest car to you !</h1>
             <h4>
-              Ciuccia gay
+              Qualcosa
             </h4>
             <br />
            <!-- <md-button
