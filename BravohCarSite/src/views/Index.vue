@@ -22,7 +22,7 @@
       </div>
     </parallax>
     <div class="main main-raised">
-      <div class="section section-basic">
+      <!-- <div class="section section-basic">
         <div class="container">
           <div class="title">
             <h2>Basic Elements</h2>
@@ -266,6 +266,18 @@
             >
           </div>
         </div>
+      </div> -->
+      <div class="section section-basic">
+        <div class="container">
+          <div class="title">
+            <h2>Elenco delle auto disponibili</h2>
+          </div>
+        </div>
+        <div>
+          <table>
+            
+          </table>
+        </div>
       </div>
     </div>
   </div>
@@ -282,6 +294,8 @@ import TypographyImages from "./components/TypographyImagesSection";
 import JavascriptComponents from "./components/JavascriptComponentsSection";
 import { LoginCard } from "@/components";
 
+import getCars from "../methods.js";
+getCars();
 export default {
   components: {
     BasicElements,
@@ -371,6 +385,8 @@ export default {
     window.removeEventListener("resize", this.leafActive);
   }
 };
+
+getCars();
 </script>
 <style lang="scss">
 .section-download {
