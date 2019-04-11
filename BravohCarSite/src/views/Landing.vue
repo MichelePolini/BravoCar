@@ -287,7 +287,7 @@
 
 
               <!-- Filip e Polo, non modificare  -->
-              <form class="contact-form" method="POST" action="http://localhost:8000/Sign-Up.php">
+              <form id="signupform" class="contact-form" method="POST" action="http://localhost:8000/Sign-Up.php">
                 <div class="md-layout">
                   
                   <div class="md-layout-item md-size-50">
