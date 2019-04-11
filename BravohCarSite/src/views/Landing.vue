@@ -293,42 +293,42 @@
                   <div class="md-layout-item md-size-50">
                     <md-field>
                       <label>Name</label>
-                      <md-input v-model="addaccount.name" type="text" name="Nome" required></md-input>
+                      <md-input v-model="addaccount.name" type="text" id="Nome" required></md-input>
                     </md-field>
                   </div>
                   
                   <div class="md-layout-item md-size-50">
                     <md-field>
                       <label>Surname</label>
-                      <md-input v-model="addaccount.surname" type="text" name="Cognome" required></md-input>
+                      <md-input v-model="addaccount.surname" type="text" id="Cognome" required></md-input>
                     </md-field>
                   </div>
 
                   <div class="md-layout-item md-size-50">
                     <md-field>
                       <label>Card's number</label>
-                      <md-input v-model="addaccount.number" type="text" name="NumeroCarta" required></md-input>
+                      <md-input v-model="addaccount.number" type="text" id="NumeroCarta" required></md-input>
                     </md-field>
                   </div>
 
                   <div class="md-layout-item md-size-50">
                     <md-field>
                       <label>CVV</label>
-                      <md-input v-model="addaccount.cvv" type="password" name="CVV" required></md-input>
+                      <md-input v-model="addaccount.cvv" type="password" id="CVV" required></md-input>
                     </md-field>
                   </div>
 
                   <div class="md-layout-item md-size-50">
                     <md-field>
                       <label>Email</label>
-                      <md-input v-model="addaccount.email" type="email" name="Email" required></md-input>
+                      <md-input v-model="addaccount.email" type="email" id="Email" required></md-input>
                     </md-field>
                   </div>
                 
                 <div class="md-layout-item md-size-50">
                   <md-field>
                     <label>Password</label>
-                    <md-input v-model="addaccount.password" type="password" name="Psw" required></md-input>
+                    <md-input v-model="addaccount.password" type="password" id="Psw" required></md-input>
                   </md-field>
                 </div>
                 
