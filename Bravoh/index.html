@@ -14,15 +14,16 @@
 </head>
 
 <body>
-    <div class="container">
-        <div id="app-bar">
-            <h1 onclick="showLanding()">Bravoh Car</h1>
-            <button id="signInButton" onclick="showSignIn()">LOGIN</button>
-            <button id="signUpButton"onclick="showSignUp()">SIGNUP</button>
-            <button id="searchCarButton"onclick="showCarsPage()">Search Car</button>
-            <button id="logOutButton" onclick="">LogOut</button>
-        </div>
-        <div id=body>
+    <div>
+        <nav class="navbar navbar-light bg-light justify-content-between">
+            <a class="navbar-brand" onclick="showLanding()">Bravoh Car</a>
+                <button id="signInButton" class="btn btn-success" onclick="showSignIn()">LOGIN</button>
+                <button id="signUpButton" class="btn btn-warning" onclick="showSignUp()">SIGNUP</button>
+                <button id="searchCarButton" class="btn btn-info" onclick="showCarsPage()">Search Car</button>
+                <button id="logOutButton" class="btn btn-danger" onclick="">LogOut</button>
+        
+          </nav>
+        <div class="container" id=body>
             <!-- LANDING -->
             <div id="landing">
                 <div class="top">
@@ -75,30 +76,24 @@
                             <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="inputAddress">Address</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputAddress2">Address 2</label>
-                        <input type="text" class="form-control" id="inputAddress2"
-                            placeholder="Apartment, studio, or floor">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputCity">Nome</label>
+                            <input type="text" class="form-control" id="inputNome">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputZip">Cognome</label>
+                            <input type="text" class="form-control" id="inputCognome">
+                        </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="inputCity">City</label>
-                            <input type="text" class="form-control" id="inputCity">
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="inputState">State</label>
-                            <select id="inputState" class="form-control">
-                                <option selected>Choose...</option>
-                                <option>...</option>
-                            </select>
+                            <label for="inputCity">Numero Carta</label>
+                            <input type="text" class="form-control" id="inputNumeroCarta">
                         </div>
                         <div class="form-group col-md-2">
-                            <label for="inputZip">Zip</label>
-                            <input type="text" class="form-control" id="inputZip">
+                            <label for="inputZip">CVV</label>
+                            <input type="password" class="form-control" id="inputCvv">
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary">Sign in</button>

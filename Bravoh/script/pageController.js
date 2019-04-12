@@ -7,7 +7,7 @@ const signUpButton = document.getElementById('signUpButton');
 const searchCarButton = document.getElementById('searchCarButton');
 const logOutButton = document.getElementById('logOutButton');
 
-let logged = false;
+let logged = true;
 
 
 function showSignIn() {
