@@ -7,7 +7,7 @@ const signUpButton = document.getElementById('signUpButton');
 const searchCarButton = document.getElementById('searchCarButton');
 const logOutButton = document.getElementById('logOutButton');
 
-let logged = true;
+let logged = false;
 
 
 function showSignIn() {
@@ -22,10 +22,12 @@ function showSignIn() {
 function checkLogged() {
     if(logged) {
         searchCarButton.style.display = 'inline';
+        logOutButton.style.display = 'inline';
         hideLogIn();
     }
     else {
         searchCarButton.style.display = 'none';
+        logOutButton.style.display = 'none';
     }
 }
 function showSignUp() {
