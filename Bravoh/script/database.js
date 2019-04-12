@@ -26,6 +26,9 @@ function signIn() {
 }
 
 function signUp() {
+    var values = new FormData();
+    values.append('email', "abc")
+    values.append('password', "cc")
     fetch('signUp.php', {
         mode: 'no-cors',
         method: 'POST',
