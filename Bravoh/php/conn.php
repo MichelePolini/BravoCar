@@ -5,5 +5,5 @@
     //Connessione con il server
     $conn=new PDO("mysql:host=$servername; dbname=quintaa_carsharing",$username,$password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $secret='123';
+    //$secret='123';
 ?>
