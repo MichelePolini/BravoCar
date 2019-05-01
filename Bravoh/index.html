@@ -1,162 +1,226 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <title>Bravoh Car</title>
+  <title>Bravoh Car</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/one-page-wonder.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <div>
-        <nav class="navbar navbar-light bg-light justify-content-between">
-            <a class="navbar-brand" onclick="showLanding()">Bravoh Car</a>
-                <button id="signInButton" class="btn btn-success" onclick="showSignIn()">LOGIN</button>
-                <button id="signUpButton" class="btn btn-warning" onclick="showSignUp()">SIGNUP</button>
-                <button id="searchCarButton" class="btn btn-info" onclick="showCarsPage()">Search Car</button>
-                <button id="logOutButton" class="btn btn-danger" onclick="">LogOut</button>
-        
-          </nav>
-        <div class="container" id=body>
-            <!-- LANDING -->
-            <div id="landing">
-                <div class="top">
-                    <h3>Your Journey Starts With Us.</h3>
-                    <h5>Come and dicorver us !</h5>
-                </div>
-                <div class="description">
-                    <h2>Learn More About Us</h2>
-                    <h5>We are the biggest Car Renting Agency that works all over the Methropolitan Area of Florence.
-                            We offer several kinds of cars, one for every need. We offer personalized packages based on the user's request.   </h5>
-                </div>
-                <div class="feature">
-                    <div id="feature1">
-                        <h3>Reliable like a Fingerprint</h3>
-                        <p>Our service is grant to be the best in term of quality and cost. Our deal with car companies made possible to provide the best service at the best cost.</p>
-                    </div>
-                    <div id="feature2">
-                            <h3>We met about our costumers</h3>
-                            <p>Thanks to BravohCar, carsharing has never been easier. Register, validate and drive – with BravohCar you always have a car in Florence when you need one.</p>
-                    </div>
-                </div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <a onclick="showLanding()" class="navbar-brand" href="#">Bravoh Car</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li id="signUpButton" class="nav-item" onclick="showSignUp()">
+            <a class="nav-link" href="#">Sign Up</a>
+          </li>
+          <li id="signInButton" onclick="showSignIn()" class="nav-item">
+            <a class="nav-link" href="#">Log In</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="landing">
+    <header class="masthead text-center text-white">
+      <div class="masthead-content">
+        <div class="container">
+          <h1 class="masthead-heading mb-0">Your Journey Starts With Us</h1>
+          <h2 class="masthead-subheading mb-0">Come and discover us !</h2>
+          <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a>
+        </div>
+      </div>
+      <div class="bg-circle-1 bg-circle"></div>
+      <div class="bg-circle-2 bg-circle"></div>
+      <div class="bg-circle-3 bg-circle"></div>
+      <div class="bg-circle-4 bg-circle"></div>
+    </header>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <img class="img-fluid rounded-circle" src="img/01.jpg" alt="">
             </div>
-            <!-- LOGIN -->
-            <div id="signIn">
-                <form>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="Enter email">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                            else.</small>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Sign In</button>
-                </form>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h2 class="display-4">Learn More About Us</h2>
+              <p>We are the biggest Car Renting Agency that works all over the Methropolitan Area of Florence. We offer several kinds of cars, one for every need. We offer personalized packages based on the user's request.</p>
             </div>
-            <!-- SIGNUP -->
-            <div id="signUp">
-                <form>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputEmail4">Email</label>
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="inputPassword4">Password</label>
-                            <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputCity">Nome</label>
-                            <input type="text" class="form-control" id="inputNome">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="inputZip">Cognome</label>
-                            <input type="text" class="form-control" id="inputCognome">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputCity">Numero Carta</label>
-                            <input type="text" class="form-control" id="inputNumeroCarta">
-                        </div>
-                        <div class="form-group col-md-2">
-                            <label for="inputZip">CVV</label>
-                            <input type="password" class="form-control" id="inputCvv">
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Sign in</button>
-                </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="p-5">
+              <img class="img-fluid rounded-circle" src="img/02.jpg" alt="">
             </div>
-            <div id="carsPage">
-                <div>
-                    <table class="table">
-                        <thead>
-                          <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Targa</th>
-                            <th scope="col">Marca</th>
-                            <th scope="col">Longitudine</th>
-                            <th scope="col">Latitudine</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">1</th>
-                            <td>FE123PL</td>
-                            <td>Audi</td>
-                            <td>43.12445</td>
-                            <td>43.91545</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td>FA500KM</td>
-                            <td>Audi</td>
-                            <td>43.12445</td>
-                            <td>43.91545</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td>FE123PL</td>
-                            <td>Audi</td>
-                            <td>43.12445</td>
-                            <td>43.91545</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="p-5">
+              <h2 class="display-4">Reliable like a Fingerprint</h2>
+              <p>Our service is grant to be the best in terms of quality and cost. Our deal with car companies made possible to provide the best service at the best cost.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <img class="img-fluid rounded-circle" src="img/03.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h2 class="display-4">We met about our costumers</h2>
+              <p>Thanks to BravohCar, carsharing has never been easier. Register, validate and drive – with BravohCar you always have a car in Florence when you need one.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- LOGIN -->
+  <div id="signIn" class="old">
+    <form>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                else.</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary">Sign In</button>
+    </form>
+</div>
+<!-- SIGNUP -->
+<div id="signUp" class="old">
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPassword4">Password</label>
+                <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
             </div>
         </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputCity">Nome</label>
+                <input type="text" class="form-control" id="inputNome">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputZip">Cognome</label>
+                <input type="text" class="form-control" id="inputCognome">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputCity">Numero Carta</label>
+                <input type="text" class="form-control" id="inputNumeroCarta">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="inputZip">CVV</label>
+                <input type="password" class="form-control" id="inputCvv">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+    </form>
+</div>
+<div id="carsPage" class="old">
+    <div>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Targa</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Longitudine</th>
+                <th scope="col">Latitudine</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>FE123PL</td>
+                <td>Audi</td>
+                <td>43.12445</td>
+                <td>43.91545</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>FA500KM</td>
+                <td>Audi</td>
+                <td>43.12445</td>
+                <td>43.91545</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>FE123PL</td>
+                <td>Audi</td>
+                <td>43.12445</td>
+                <td>43.91545</td>
+              </tr>
+            </tbody>
+          </table>
     </div>
+  </div>
+  <!-- Footer -->
+  <footer class="py-5 bg-black">
+    <div class="container">
+      <p class="m-0 text-center text-white small">Copyright &copy; BravohCar 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
 
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <script src='script/pageController.js'></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src='script/pageController.js'></script>
     <script>window.onload = function () {
             showLanding();
         };
     </script>
+
+
 </body>
 
 </html>
